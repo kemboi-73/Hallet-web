@@ -1,0 +1,336 @@
+body {
+    /* Styles placed here will affect the body of the webpage. */
+    background-color: rgb(253, 253, 253);
+    font-family: 'Times new roman', Times, serif;    
+}
+
+
+/* Heading styles */
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+	font-size: 2rem;
+}
+
+h4 {
+	font-size: 1.4rem;
+}
+
+/* These styles will affect all levels of headings */
+h1, h2, h3, h4 {
+    color: #3571ae;
+}
+
+/* These styles will affect all levels of headings within the class "dark" */
+.dark h1, .dark h2, .dark h3, .dark h4 {
+    color: #ffffff;
+}
+
+/* These styles will affect the links within the 'links' element (top navigation bar)*/
+#links li a {
+	text-decoration: none;
+	color: #000;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+/* These styles will affect the hover state links within the 'links' element (top navigation bar)*/
+#links li a:hover {
+	color: #ff0000;
+}
+
+/* These styles will affect the navigation bar*/
+.navigation {
+    background-color: transparent;
+}
+
+/* These styles will affect the elements with the class "dark" applied*/
+.dark {
+    color: #fff;
+    background-color: #606060;
+}
+
+/* These styles will affect the "hamburger" button for mobile display*/
+.hamburger {
+    color: #000000;    
+}
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    background: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger to X transformation */
+input[type="checkbox"]:checked + .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+input[type="checkbox"]:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+input[type="checkbox"]:checked + .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Navigation Menu */
+#links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+#links li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Show Menu When Checkbox is Checked */
+input[type="checkbox"]:checked ~ #links {
+    display: flex;
+}
+
+
+/* These styles will affect the header section */
+header {    
+    background-color: transparent;
+}
+
+
+/* These styles will affect the Call To Action buttons */
+/* These styles will affect the Call To Action buttons */
+.cta-btn {
+    background-color: #0052a0;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    width: 175px;
+    text-align: center;
+    height: 2rem;
+    text-decoration: none;
+    padding: .5rem 0 0 0;
+    margin: 0 0 2rem 0;
+    border-radius: 100px;
+    transition: .2s ease all;
+}
+.cta-btn:hover {
+    background-color: #efefef;
+    color:#000;
+}
+
+
+/*accordion css codes*/
+.accordion-container {
+    margin-bottom: 1.5rem;
+}
+
+.accordion-button {
+    font-size: 1rem;
+    background-color: #efefef;
+    width: 100%;
+    cursor: pointer;
+    color: #000;
+    border-radius: 100em;
+    font-weight: bold;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between; /* Ensures the + is aligned to the right */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    text-align: left;
+}
+
+.accordion-button:hover,
+.accordion-button:active {
+    background-color: #0052a0;
+    color: #fff;
+}
+
+.accordion-indicator {
+    font-size: 1.5rem; /* Larger size for the + and − symbols */
+}
+
+.accordion-content {
+    padding: 0 2rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.3s ease-in;
+    opacity: 0;
+}
+
+.accordion-content.open {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.accordion-content p {
+    margin: 1rem 0;
+    line-height: 1.5;
+}
+
+
+/* css for the footer section*/
+footer {
+    display: flex;
+    justify-content: space-between; /* Align sections horizontally */
+    align-items: flex-start;
+    background-color: #0a0f22; /* Dark background */
+    color: #fff; /* White text */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap; /* Ensure it works on smaller screens */
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section p, .footer-section a, .footer-section ul {
+    color: #b0b4be; /* Light grey */
+    margin: 5px 0;
+}
+
+.footer-section a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #ffffff;
+}
+
+#footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+#footer-links li {
+    margin: 5px 0;
+}
+
+#footer-links li a {
+    color: #b0b4be;
+    text-decoration: none;
+}
+
+#footer-links li a:hover {
+    color: #ffffff; /* Hover effect */
+}
+
+img {
+    width: 50px; /* Adjust logo size */
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+footer img {
+    margin-bottom: -8px; /* Align logo with text */
+}
+
+
+/* These styles will affect screens smaller than 1350px */
+@media only screen and (max-width: 1350px) {
+
+    h1 {
+        font-size: 4rem;
+    }   
+
+}
+
+
+/* These styles will affect screens smaller than 992px (tablet and mobile) */
+@media only screen and (max-width: 992px) {
+
+    h1 {
+        font-size: 4rem;
+        margin-top: 2rem;
+        font-size: 4rem;
+    }
+    
+    #links {
+        background-color: #dddddd;
+    }
+
+    
+}
+
+/* effect for the scroll effect when a sction to a button is pressed*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*for video respponsiveness*/
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Aspect ratio: 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+
+
+
+header {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    padding: 20px; /* Optional: Adjust padding as needed */
+}
+
+.col {
+    flex: 1; /* Allow columns to share space equally */
+}
+
+.banner {
+    width: 80%; /* Force the image to be a percentage of the container width */
+    max-width: none; /* Remove maximum width constraints */
+    height: auto; /* Maintain the aspect ratio */
+    display: block;
+    margin: 0 auto;
+}
+
+

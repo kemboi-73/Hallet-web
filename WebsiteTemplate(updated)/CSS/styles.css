@@ -333,4 +333,16 @@ header {
     margin: 0 auto;
 }
 
+/*gallery wordings font*/
+#gallery-container p {
+    font-size: 0.8em; /* Smaller text */
+    font-style: italic; /* Italicized text */
+}
+  
+  figcaption {
+    font-size: 0.8em; /* Make the font smaller */
+    font-style: italic; /* Make the font italic */
+  }
+   
+
 
